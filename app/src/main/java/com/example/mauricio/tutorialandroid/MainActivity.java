@@ -1,5 +1,6 @@
 package com.example.mauricio.tutorialandroid;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -27,5 +28,13 @@ public class MainActivity extends AppCompatActivity {
     public void onClickElBoton(View view) {
         String entrada = etEntrada.getText().toString();
         tvSalida.setText(entrada);
+    }
+
+    public void onClickIra2(View view) {
+        Intent i = new Intent(this, Main2Activity.class);
+        String entrada = etEntrada.getText().toString();
+        i.putExtra("P1", entrada);
+        i.putExtra("P2", new Data(2,4));
+        startActivity(i);
     }
 }
