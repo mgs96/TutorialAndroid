@@ -19,4 +19,26 @@
         android:id="@+id/textView"
         android:textStyle="normal|bold"
         android:textSize="24sp" />
+
+    <Button
+        android:text="regresar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:onClick="onClickGoBack"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginTop="149dp"
+        android:id="@+id/button2" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Valor"
+        android:ems="10"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="69dp"
+        android:id="@+id/etEntrada" />
 </RelativeLayout>

@@ -32,9 +32,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickIra2(View view) {
         Intent i = new Intent(this, Main2Activity.class);
-        String entrada = etEntrada.getText().toString();
-        i.putExtra("P1", entrada);
-        i.putExtra("P2", new Data(2,4));
-        startActivity(i);
+        startActivityForResult(i, 1);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode == 1){
+            if(resultCode == RESULT_OK){
+                int result = data.getIntExtra("Valor", 0);
+                tvSalida.setText("" + result);
+            }
+        }
     }
 }
