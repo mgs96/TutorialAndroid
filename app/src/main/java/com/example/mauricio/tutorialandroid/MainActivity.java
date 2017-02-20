@@ -40,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
         if(requestCode == 1){
             if(resultCode == RESULT_OK){
                 int result = data.getIntExtra("Valor", 0);
-                tvSalida.setText("" + result);
+                Data d = (Data) data.getSerializableExtra("Valor");
+                tvSalida.setText("" + d.a);
             }
         }
     }

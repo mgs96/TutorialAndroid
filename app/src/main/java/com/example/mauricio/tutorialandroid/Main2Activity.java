@@ -29,8 +29,8 @@ public class Main2Activity extends AppCompatActivity {
         int value = Integer.valueOf(et.getText().toString());
 
         Intent returnIntent = new Intent();
-        returnIntent.putExtra("Valor", value);
-        setResult(Activity.RESULT_OK);
+        returnIntent.putExtra("Valor", new Data(value, value));
+        setResult(Activity.RESULT_OK, returnIntent);
         finish();
     }
 }
